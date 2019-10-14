@@ -1,0 +1,126 @@
+
+.App {
+  background-color: #ececec;
+  padding-top: 100px;
+  min-height: 100vh;
+}
+
+.login-container{
+  width: 500px;
+  margin: 0px auto;
+}
+
+.login-box{
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+}
+.login-form input{
+  margin: 20px 0px;
+}
+
+.main-container{
+  position: relative;
+  border: 1px solid;
+  border-radius: 5px;
+  max-width: 650px;
+  margin: 0px auto;
+  flex-wrap: wrap;
+}
+.task-item-box{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  white-space: normal;
+  background-color: white;
+  margin: 10px 0px;
+  border-radius: 5px;
+  padding-left: 20px;
+}
+.icons{
+  opacity: 0;
+  white-space: nowrap;
+}
+
+.task-item-box:hover > .icons{
+  opacity: 1;
+}
+.icon:hover{
+  color: green;
+}
+
+.completed{
+  opacity: 0.4;
+}
+.completed p{
+  text-decoration: line-through;
+}
+
+.form{
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 78% 20%;
+  grid-gap: 2%;
+}
+
+.logout-btn{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.item-title{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+/*LOADER*/
+.lds-dual-ring {
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 46px;
+  height: 46px;
+  margin: 1px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+.loader{
+  display: flex;
+  justify-content: center;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 575.98px) {  
+  .form{
+    grid-template-columns: 100%;
+    grid-row-gap: 10px;
+  }
+}
+@media (max-width: 650px) {
+  .App{
+    padding: 0px;
+  }
+}
+@media (max-width: 991.98px) {  
+  .icons{
+    opacity: 1;
+  }
+}
+
