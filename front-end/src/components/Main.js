@@ -13,7 +13,7 @@ const Main = ({tasks, logoutUser, history, user, getTasks, addTask}) => {
   useEffect(() => {
     setLoading(true);
     getTasks(user.email);
-    const socketClient = socketIOClient('http://localhost:5000');
+    const socketClient = socketIOClient('https://task-manager-nerdysoft.herokuapp.com');
     setSocket(socketClient);
     socketClient.emit('setEmail', user.email);
     socketClient.on('addTask', obj => {
