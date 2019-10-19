@@ -25,7 +25,7 @@ const TaskItem = ({item, socket, deleteTask, checkTask, editTask, getUsers, shar
     event.preventDefault();
     const value = event.target.elements.user.value;
     const index = users.findIndex(item => item.email === value);
-    if(index < 0){
+    if(index < 0 || value === item.user){
       setError('Email does not exists.')
     } else {
       shareTask(item.user, value, item.title);
